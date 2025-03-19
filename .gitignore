@@ -27,3 +27,13 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/temp/buffered.dat
+/temp/data.dat
+/temp/hello.dat
+/temp/hello.txt
+/temp/hello2.txt
+/temp/members-data.dat
+/temp/members-obj.dat
+/temp/members-txt.dat
+/temp/newExample.txt
+/temp/print.txt
