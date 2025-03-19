@@ -25,7 +25,6 @@ public class NewFilesPath {
             System.out.println((Files.isRegularFile(p) ? "F" : "D") + " | " + p.getFileName());
         }
 
-        
 
     }
 }
