@@ -46,7 +46,7 @@ public class SessionV6 implements Runnable {
 
         } catch (IOException e) {
             log(e);
-        } finally {
+        }finally {
             sessionManager.remove(this);
             close();
         }
@@ -56,14 +56,13 @@ public class SessionV6 implements Runnable {
 
     // 새션 종료시, 서버 종료시 동시에 호출 될 수 있다.
     public synchronized void close() {
-        if (closed) {
+        if(closed) {
             return;
         }
 
         closeAll(socket, input, output);
         closed = true;
-        log("연결 종료: " + socket + " is Closed: ");
-
+        log("연결 종료: " + socket + " is Closed: " + socket.isClosed());
     }
 
 
