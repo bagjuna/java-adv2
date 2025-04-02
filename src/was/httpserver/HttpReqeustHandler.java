@@ -1,7 +1,4 @@
-package was.v4;
-
-import was.httpserver.HttpRequest;
-import was.httpserver.HttpResponse;
+package was.httpserver;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,10 +9,10 @@ import java.net.Socket;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static util.MyLogger.log;
 
-public class HttpReqeustHandlerV4 implements Runnable {
+public class HttpReqeustHandler implements Runnable {
     private final Socket socket;
 
-    public HttpReqeustHandlerV4(Socket socket) {
+    public HttpReqeustHandler(Socket socket) {
         this.socket = socket;
     }
 
