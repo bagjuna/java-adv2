@@ -1,5 +1,6 @@
 package was.httpserver;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,9 +12,10 @@ import static util.MyLogger.log;
 
 public class HttpReqeustHandler implements Runnable {
     private final Socket socket;
-
-    public HttpReqeustHandler(Socket socket) {
+    private final ServletManager servletManager;
+    public HttpReqeustHandler(Socket socket, ServletManager servletManager) {
         this.socket = socket;
+        this.servletManager = servletManager;
     }
 
     @Override
@@ -34,30 +36,10 @@ public class HttpReqeustHandler implements Runnable {
             HttpRequest request = new HttpRequest(reader);
             HttpResponse response = new HttpResponse(writer);
 
-            if (request.getPath().equals("/favicon.ico")) {
-                log("favicon 요청 ");
-                return;
-            }
-
-
-            log("HTTP 요청 정보 출력");
-            System.out.println(request);
-
-
-            if (request.getPath().equals("/site1")) {
-                site1(response);
-            } else if (request.getPath().equals("/site2")) {
-                site2(response);
-            } else if (request.getPath().equals("/search")) {
-                search(request, response);
-            } else if (request.getPath().equals("/")) {
-                home(response);
-            } else {
-                notFound(response);
-            }
-
+            log("HTTP 요청: " + request);
+            servletManager.execute(request, response);
             response.flush();
-            log("HTTP 응답 전달 완료");
+            log("HTTP 응답 완료");
 
         }
 
