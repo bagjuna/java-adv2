@@ -15,6 +15,7 @@ public class SearchServlet implements HttpServlet {
         response.writeBody("<ul>");
         response.writeBody("<li>query: " + query + "</li>");
         response.writeBody("</ul>");
+
     }
 
 
