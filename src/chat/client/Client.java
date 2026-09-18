@@ -18,7 +18,7 @@ public class Client {
     private DataOutputStream output;
 
     private ReadHandler readHandler;
-    private WrieteHandler writeHandler;
+    private WriteHandler writeHandler;
     private boolean closed = false;
 
     public Client(String host, int port) {
@@ -33,7 +33,7 @@ public class Client {
         output = new DataOutputStream(socket.getOutputStream());
 
         readHandler = new ReadHandler(input, this);
-        writeHandler = new WrieteHandler(output, this);
+        writeHandler = new WriteHandler(output, this);
 
         Thread readThread = new Thread(readHandler, "readHandler");
         Thread writeThread = new Thread(writeHandler, "writeHandler");
@@ -51,6 +51,5 @@ public class Client {
         closed = true;
         log("연결 종료: " + socket);
     }
-
 
 }

@@ -28,7 +28,6 @@ public class SessionV6 implements Runnable {
     public void run() {
         // finally 블록에서 변수에 접근해야 한다. 따라서 try 블록 안에서 선언 할 없다.
         try {
-
             while (true) {
                 // 클라이언트로부터 문자 받기
                 String received = input.readUTF();

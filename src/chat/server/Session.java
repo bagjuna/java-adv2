@@ -9,7 +9,7 @@ import java.net.Socket;
 
 import static util.MyLogger.log;
 
-public class Session implements Runnable {
+public class Session  implements Runnable {
 
     private final Socket socket;
     private final DataInputStream input;

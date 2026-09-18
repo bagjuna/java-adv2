@@ -12,10 +12,10 @@ import java.net.Socket;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static util.MyLogger.log;
 
-public class HttpReqeustHandlerV4 implements Runnable {
+public class HttpRequestHandlerV4 implements Runnable {
     private final Socket socket;
 
-    public HttpReqeustHandlerV4(Socket socket) {
+    public HttpRequestHandlerV4(Socket socket) {
         this.socket = socket;
     }
 

@@ -41,5 +41,12 @@ public class ResetCloseClient {
         }
 
 
+        try {
+            output.write(1);
+        }catch (SocketException e) {
+            e.printStackTrace();
+        }
+
+
     }
 }
