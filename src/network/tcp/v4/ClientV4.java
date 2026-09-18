@@ -17,8 +17,8 @@ public class ClientV4 {
     public static void main(String[] args) throws IOException {
         log("클라이언트 시작");
         // finally 블록에서 변수에 접근해야 한다. 따라서 try 블록 밖에서 선언 해야야 한다.
-        Socket socket = null;DataInputStream input = null;
-
+        Socket socket = null;
+        DataInputStream input = null;
         DataOutputStream output = null;
         try {
             socket = new Socket("localhost", PORT);
