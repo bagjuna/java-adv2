@@ -35,7 +35,7 @@ public class AvailableCharsetsMain {
         Charset charset3 = StandardCharsets.UTF_8;
         System.out.println("charset3 = " + charset3);
 
-        // 시스템의 기본 Charset ㅈ회
+        // 시스템의 기본 Charset 조회
         Charset defaultCharset = Charset.defaultCharset();
         System.out.println("defaultCharset = " + defaultCharset);
 

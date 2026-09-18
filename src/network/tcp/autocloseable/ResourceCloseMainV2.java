@@ -32,7 +32,7 @@ public class ResourceCloseMainV2 {
                 resource2.closeEx();  // CloseException 발생
             }
             if (resource1 != null) {
-                resource1.callEx();  // 이 코드는 호출 안됨!
+                resource1.closeEx();  // 이 코드는 호출 안됨!
             }
         }
 

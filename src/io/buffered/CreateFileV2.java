@@ -1,7 +1,8 @@
 package io.buffered;
 
+import java.io.BufferedReader;
 import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 import static io.buffered.BufferedConst.*;
 
@@ -9,7 +10,6 @@ public class CreateFileV2 {
 
     public static void main(String[] args) throws IOException {
         FileOutputStream fos = new FileOutputStream(FILE_NAME);
-
         long startTime = System.currentTimeMillis();
 
         byte[] buffer = new byte[BUFFER_SIZE];

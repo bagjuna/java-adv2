@@ -10,7 +10,7 @@ public class CommandManagerV4 implements CommandManager {
 
     private static final String DELIMITER = "\\|";
     private final Map<String, Command> commands = new HashMap<>();
-    private final Command defaultCommand = new DefaultCommand();
+    private final static Command defaultCommand = new DefaultCommand();
 
     public CommandManagerV4(SessionManager sessionManager) {
 

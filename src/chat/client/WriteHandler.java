@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 import static util.MyLogger.log;
 
-public class WrieteHandler implements Runnable {
+public class WriteHandler implements Runnable {
 
     private static final String DELIMITER = "|";
 
@@ -16,7 +16,7 @@ public class WrieteHandler implements Runnable {
 
     private boolean closed = false;
 
-    public WrieteHandler(DataOutputStream output, Client client) {
+    public WriteHandler(DataOutputStream output, Client client) {
         this.output = output;
         this.client = client;
     }
