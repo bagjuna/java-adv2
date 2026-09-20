@@ -10,10 +10,10 @@ import java.net.URLDecoder;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static util.MyLogger.log;
 
-public class HttpReqeustHandlerV3 implements Runnable {
+public class httpReqeustHandlerV3 implements Runnable {
     private final Socket socket;
 
-    public HttpReqeustHandlerV3(Socket socket) {
+    public httpReqeustHandlerV3(Socket socket) {
         this.socket = socket;
     }
 

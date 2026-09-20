@@ -9,10 +9,10 @@ import java.net.Socket;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static util.MyLogger.log;
 
-public class HttpReqeustHandlerV2 implements Runnable {
+public class HttpRequestHandlerV2 implements Runnable {
     private final Socket socket;
 
-    public HttpReqeustHandlerV2(Socket socket) {
+    public HttpRequestHandlerV2(Socket socket) {
         this.socket = socket;
     }
 
