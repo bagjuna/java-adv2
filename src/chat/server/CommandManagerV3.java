@@ -25,20 +25,16 @@ public class CommandManagerV3 implements CommandManager {
     public void execute(String totalMessage, Session session) throws IOException {
 
         // /join|han
+
         String[] args = totalMessage.split(DELIMITER);
         String key = args[0];
 
         Command command = commands.get(key);
-
-        if(command == null){
-            session.send("처리할 수 없는 명령어 입니다:" + totalMessage);
+        if (command == null) {
+            session.send("처리 할 수 없는 명령어입니다: " + totalMessage);
             return;
         }
-
         command.execute(args, session);
-
     }
-
-
 
 }

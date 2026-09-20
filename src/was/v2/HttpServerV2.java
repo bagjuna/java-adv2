@@ -22,7 +22,7 @@ public class HttpServerV2 {
 
         while (true) {
             Socket socket = serverSocket.accept();
-            es.submit(new HttpReqeustHandlerV2(socket));
+            es.submit(new HttpRequestHandlerV2(socket));
         }
     }
 }
